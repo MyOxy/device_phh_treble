@@ -47,7 +47,7 @@ for part in a ab;do
 				if [ "$apps" == "e" ];then
 					apps_suffix="e"
 					target_prefix="lineage_"
-					extra_packages+=' GmsCore GsfProxy FakeStore com.google.android.maps.jar Mail BlissLauncher BlissIconPack MozillaNlpBackend OpenWeatherMapWeatherProvider AccountManager MagicEarth OpenCamera eDrive Weather Tasks NominatimNlpBackend DroidGuard OpenKeychain Message Browser BrowserWebView Apps'
+					extra_packages+=' -LibreOfficeViewer'
 				fi
 				if [ "$arch" == "arm" ];then
 					vndk="vndk-binder32.mk"
