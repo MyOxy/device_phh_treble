@@ -33,3 +33,8 @@ on property:ro.hardware=hi3650 && property:sys.boot_completed=1
 	start hi3650_camerainit
 
 
+on property:persist.sys.phh.mainkeys=*
+    setprop qemu.hw.mainkeys ${persist.sys.phh.mainkeys}
+
+on property:persist.sys.phh.xiaomi.dt2w=*
+    exec_background u:r:phhsu_daemon:s0 root -- /system/bin/phh-prop-handler.sh "persist.sys.phh.xiaomi.dt2w"
